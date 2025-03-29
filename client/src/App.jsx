@@ -6,7 +6,7 @@ import BuyCredits from './pages/BuyCredits'
 import Navbar from './components/Navbar'
 const App = () => {
   return (
-    <div className='min-h-screen bg-slate-50'>
+    <div className='min-h-screen bg-pink-300'>
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
