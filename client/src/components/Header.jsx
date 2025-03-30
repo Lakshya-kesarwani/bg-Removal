@@ -21,8 +21,8 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet officiis illum ani
             </div>
         </div>
         {/* ----right side  */}
-        <div>
-                
+        <div className='w-full max-w-md'>
+                <img src={assets.header_img} alt=""  />
         </div>
 
     </div>
