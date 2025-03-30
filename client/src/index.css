@@ -1,1 +1,20 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slider{
+    -webkit-appearance: none;
+    height: 100%;
+    background: transparent;
+
+}
+.slider::-webkit-slider-thumb{
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background-image: url(assets/image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
