@@ -1,15 +1,4 @@
 import React from 'react'
-<<<<<<< HEAD
-import assets from './../assets/assets'
-
-const Navbar = () => {
-  return (
-    <div>
-        <img src={assets.logo} alt="" />
-        Navbar
-    </div>
-  )
-=======
 import { assets } from '../assets/assets'
 import {Link } from'react-router-dom'
 const Navbar = () => {
@@ -22,7 +11,6 @@ const Navbar = () => {
             </button>
         </div>
     )
->>>>>>> bfd9f49f88d9fd8cf41bcdcae49f99d6af971de2
 }
 
 export default Navbar
