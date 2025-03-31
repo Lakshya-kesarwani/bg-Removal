@@ -4,26 +4,30 @@ import userModel from '../models/userModel.js'
 
 // API Controller Function to manage clerk user with database
 //url/api/user/webhooks
-
+console.log("I am inside controller")
 const clerkWebhooks = async (req,res) => {
-
+    console.log("Request Body:", req.body);
     try {
-        
+        console.log("Headers:", req.headers);
+
         // Create a Svix instance with clerk webhook secret
         const whook = new Webhook(process.env.CLERK_WEBHOOK_SECRET)
+
+        console.log("Webhook Secret:", process.env.CLERK_WEBHOOK_SECRET);
+
         await whook.verify(JSON.stringify(req.body),{
             "svix-id":req.headers['svix-id'],
             "svix-timestamp":req.headers['svix-timestamp'],
             "svix-signature":req.headers['svix-signature']
         })
 
-        const [data,type] = req.body
-
+        const [data,type] = req.body;
+        console.log(data)
         switch (type) {
             case "user.created":{
                 const userData = {
                     clerkId: data.id,
-                    email: data.email_addresses[0] .email_address,
+                    email: data.email_addresses[0].email_address,
                     photo: data.image_url,
                     firstName: data.first_name,
                     lastName: data.last_name,
